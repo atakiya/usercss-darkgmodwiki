@@ -2,9 +2,9 @@
 @name           Dark GMod Wiki
 @namespace      Avunia.styles
 @version        0.1.0
-@updateURL			https://github.com/Avunia/usercss-darkgmodwiki/raw/master/gmodwiki-dark.user.css
-@description		A dark and minimalistic approach to the GMod wiki which is otherwise quite an eyesore
-@author					Avunia
+@updateURL      https://raw.githubusercontent.com/Avunia/usercss-darkgmodwiki/master/gmodwiki-dark.user.css
+@description    A dark and minimalistic approach to the GMod wiki which is otherwise quite an eyesore
+@author         Avunia
 ==/UserStyle== */
 
 @-moz-document domain("wiki.garrysmod.com") {
