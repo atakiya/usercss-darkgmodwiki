@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dark GMod Wiki
 @namespace      Avunia.styles
-@version        0.1.0
+@version        0.2.0
 @updateURL      https://raw.githubusercontent.com/Avunia/usercss-darkgmodwiki/master/gmodwiki-dark.user.css
 @description    A dark and minimalistic approach to the GMod wiki which is otherwise quite an eyesore
 @author         Avunia
@@ -38,6 +38,17 @@
     table.gmodwiki_note tr td:nth-child( 2 ) {
         background: #525252;
     }
+    pagelist::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        border: 1px solid #525252;
+        -webkit-box-shadow: none;
+    }
+    pagelist::-webkit-scrollbar-thumb:hover {
+        border: 1px solid #ccc;
+    }
+    pagelist h1 {
+        color: #ccc!important;
+    }
     .arg_number, .ret_number {
         background-color: #525252;
         color: #383838;
@@ -58,23 +69,29 @@
     }
     #searchInput {
         height: 28px;
-        border: 1px solid #525252!important;
-        border-radius: 0;
-        background-color: rgba(0,0,0,0);
+        border-top: 1px solid #525252!important;
+        border-left: 1px solid #525252!important;
+        border-right: 1px solid transparent!important;
+        border-bottom: 1px solid #525252!important;
+        background-color: transparent;
         color: #666;
+        transition: all .2s;
     }
-    #searchInput:active {
+    #searchInput:focus, #searchInput:hover {
         border: 1px solid #ccc!important;
+        color: #ccc;
     }
     #mw-searchButton {
-        border-top: 1px solid #525252!important;
-        border-left: 0;
-        border-right: 1px solid #525252!important;
-        border-bottom: 1px solid #525252!important;
-        border-radius: 0;
-        background-color: rgba(0,0,0,0);
-        color: #fff;
+        border: 1px solid #525252!important;
+        background-color: transparent;
+        color: #666;
         height: 30px;
+        transition: all .2s;
+    }
+    #mw-searchButton:hover {
+        background-color: transparent;
+        border: 1px solid #ccc!important;
+        color: #ccc;
     }
     #bodyContent table div {
         background-color: #525252!important;
