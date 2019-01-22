@@ -1,0 +1,82 @@
+/* ==UserStyle==
+@name           Dark GMod Wiki
+@namespace      Avunia.styles
+@version        0.1.0
+@updateURL			https://github.com/Avunia/usercss-darkgmodwiki/raw/master/gmodwiki-dark.user.css
+@description		A dark and minimalistic approach to the GMod wiki which is otherwise quite an eyesore
+@author					Avunia
+==/UserStyle== */
+
+@-moz-document domain("wiki.garrysmod.com") {
+    /* Insert code here... */
+    html {
+    color: #ccc;
+    }
+    body {
+        background-color: #383838;
+        background-image: none;
+    }
+    a {
+        color: #66adff;
+    }
+    h1, h1 a, h2, h2 a {
+        color: #ccc!important;
+        border: none;
+        text-shadow: 0 0 3px rgba( 0,0,0,0.3 );
+    }
+    navigation {
+        background-color: #2e2e2e;
+        background-image: none;
+    }
+    table.gmodwiki_note tr td:nth-child( 1 ) {
+        background: #525252!important;
+        color: #33a0ff;
+    }
+    table.gmodwiki_note.warning_note tr td:nth-child( 1 ) {
+        color: #ffa033;
+    }
+    table.gmodwiki_note tr td:nth-child( 2 ) {
+        background: #525252;
+    }
+    .arg_number, .ret_number {
+        background-color: #525252;
+        color: #383838;
+    }
+    .function_line {
+        background-color: #525252;
+    }
+    h1.firstHeading, h1.firstHeading a {
+        text-shadow: 2px 2px 6px rgba( 0,0,0,0.3 )!important;
+    }
+    .keyboard-key {
+        background-color: rgba(255, 255, 255, 0.4)!important;
+        color: #333!important;
+        font-weight: 700;
+    }
+    #catlinks ul {
+        text-shadow: none;
+    }
+    #searchInput {
+        height: 28px;
+        border: 1px solid #525252!important;
+        border-radius: 0;
+        background-color: rgba(0,0,0,0);
+        color: #666;
+    }
+    #searchInput:active {
+        border: 1px solid #ccc!important;
+    }
+    #mw-searchButton {
+        border-top: 1px solid #525252!important;
+        border-left: 0;
+        border-right: 1px solid #525252!important;
+        border-bottom: 1px solid #525252!important;
+        border-radius: 0;
+        background-color: rgba(0,0,0,0);
+        color: #fff;
+        height: 30px;
+    }
+    #bodyContent table div {
+        background-color: #525252!important;
+    }
+}
