@@ -8,9 +8,8 @@
 ==/UserStyle== */
 
 @-moz-document domain("wiki.garrysmod.com") {
-    /* Insert code here... */
     html {
-    color: #ccc;
+        color: #ccc;
     }
     body {
         background-color: #383838;
