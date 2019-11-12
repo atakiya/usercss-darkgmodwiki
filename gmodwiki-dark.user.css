@@ -1,10 +1,12 @@
 /* ==UserStyle==
 @name           Dark GMod Wiki
 @namespace      Avunia.styles
-@version        0.2.0
+@version        0.3.0
+@homepageURL    https://github.com/Avunia/usercss-darkgmodwiki
 @updateURL      https://raw.githubusercontent.com/Avunia/usercss-darkgmodwiki/master/gmodwiki-dark.user.css
+@license        MIT
 @description    A dark and minimalistic approach to the GMod wiki which is otherwise quite an eyesore
-@author         Avunia
+@author         Avunia Takiya
 ==/UserStyle== */
 
 @-moz-document domain("wiki.garrysmod.com") {
@@ -22,6 +24,9 @@
         color: #ccc!important;
         border: none;
         text-shadow: 0 0 3px rgba( 0,0,0,0.3 );
+    }
+    h1, h2, h3, h1 a, h2 a, h3 a {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     navigation {
         background-color: #2e2e2e;
@@ -47,6 +52,11 @@
     }
     pagelist h1 {
         color: #ccc!important;
+    }
+    pagelist a, pre, pre * {
+        font-family: "Fira Code Retina", "Cascadia Code", Consolas, monospace;
+        font-weight: 300!important;
+        font-size: 13px;
     }
     .arg_number, .ret_number {
         background-color: #525252;
