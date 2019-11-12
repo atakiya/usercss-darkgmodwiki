@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dark GMod Wiki
 @namespace      Avunia.styles
-@version        0.3.0
+@version        0.3.2
 @homepageURL    https://github.com/Avunia/usercss-darkgmodwiki
 @updateURL      https://raw.githubusercontent.com/Avunia/usercss-darkgmodwiki/master/gmodwiki-dark.user.css
 @license        MIT
@@ -33,14 +33,23 @@
         background-image: none;
     }
     table.gmodwiki_note tr td:nth-child( 1 ) {
-        background: #525252!important;
-        color: #33a0ff;
-    }
-    table.gmodwiki_note.warning_note tr td:nth-child( 1 ) {
-        color: #ffa033;
+        background: #7e7e7e!important;
+        color: #fff;
     }
     table.gmodwiki_note tr td:nth-child( 2 ) {
         background: #525252;
+    }
+    table.gmodwiki_note.warning_note tr td:nth-child( 1 ) {
+        background: #be801d!important;
+    }
+    table.gmodwiki_note.warning_note tr td:nth-child( 2 ) {
+        background: #664219!important;
+    }
+    table.gmodwiki_note.bug_note tr td:nth-child( 1 ) {
+        background: #821a1a!important;
+    }
+    table.gmodwiki_note.bug_note tr td:nth-child( 2 ) {
+        background: #461818!important;
     }
     pagelist::-webkit-scrollbar-thumb {
         border-radius: 10px;
