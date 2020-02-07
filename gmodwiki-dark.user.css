@@ -1,155 +1,111 @@
 /* ==UserStyle==
-@name           Dark GMod Wiki
+@name           Dark Facepunch wiki
 @namespace      Avunia.styles
-@version        0.3.4
-@homepageURL    https://github.com/Avunia/usercss-darkgmodwiki
+@version        0.4.1
+@homepageURL    https://github.com/Avunia/usercss-darkfacepunchwiki
 @updateURL      https://raw.githubusercontent.com/Avunia/usercss-darkgmodwiki/master/gmodwiki-dark.user.css
 @license        MIT
-@description    A dark and minimalistic approach to the GMod wiki which is otherwise quite an eyesore
+@description    An overhaul of the facepunch wiki to soothe the eyes - includes image dimming
 @author         Avunia Takiya
 ==/UserStyle== */
 
-@-moz-document domain("wiki.garrysmod.com") {
-    html {
-        color: #ccc;
-    }
-    body {
-        background-color: #383838;
-        background-image: none;
-    }
-    a {
-        color: #66adff;
-    }
-    h1, h1 a, h2, h2 a {
-        color: #ccc!important;
-        border: none;
-        text-shadow: 0 0 3px rgba( 0,0,0,0.3 );
-    }
-    h1, h2, h3, h1 a, h2 a, h3 a {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    navigation {
-        background-color: #2e2e2e;
-        background-image: none;
-    }
-    /* Info / Warnings / Bugs noets */
-    table.gmodwiki_note tr td:nth-child( 1 ) {
-        background: #7e7e7e!important;
-        color: #fff;
-    }
-    table.gmodwiki_note tr td:nth-child( 2 ) {
-        background: #525252;
-    }
-    table.gmodwiki_note.warning_note tr td:nth-child( 1 ) {
-        background: #be801d!important;
-    }
-    table.gmodwiki_note.warning_note tr td:nth-child( 2 ) {
-        background: #664219!important;
-    }
-    table.gmodwiki_note.bug_note tr td:nth-child( 1 ) {
-        background: #821a1a!important;
-    }
-    table.gmodwiki_note.bug_note tr td:nth-child( 2 ) {
-        background: #461818!important;
-    }
-
-    /* Stub- / deprecated- / internal notes  */
-    .stubpage {
-        background: #404040;
-        border-left: 10px solid #7e7e7e;
-    }
-    .stubpage > span {
-        color: #b0b0b0;
-    }
-    .deprecatedfunc {
-        background: #404037;
-        border-left: 10px solid #bdbd00;
-    }
-    .deprecatedfunc > span {
-        color: #bdbd00;
-    }
-    .internalfunc {
-        background: #402929;
-        border-left: 10px solid #821a1a;
-    }
-
-    /* deprecated / internal / stub label in sidebar */
-    li.deprecated::after, li.internal::after {
-        font-size: 12px;
-        font-variant-caps: all-small-caps;
-    }
-    li.deprecated::after {
-        background: #797208!important;
-    }
-    li.internal::after {
-        background: #461818!important;
-    }
-    li.stub::after {
-        background: #525252!important;
-        color: #fff;
-    }
-    pagelist::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        border: 1px solid #525252;
-        box-shadow: none;
-        -webkit-box-shadow: none;
-    }
-    pagelist::-webkit-scrollbar-thumb:hover {
-        border: 1px solid #ccc;
-    }
-    pagelist h1 {
-        color: #ccc!important;
-    }
-    pagelist a, pre, pre * {
-        font-family: "Fira Code Retina", "Cascadia Code", Consolas, monospace;
-        font-weight: 300!important;
-        font-size: 13px;
-    }
-    .arg_number, .ret_number {
-        background-color: #525252;
-        color: #383838;
-    }
-    .function_line {
-        background-color: #525252;
-    }
-    h1.firstHeading, h1.firstHeading a {
-        text-shadow: 2px 2px 6px rgba( 0,0,0,0.3 )!important;
-    }
-    .keyboard-key {
-        background-color: rgba(255, 255, 255, 0.4)!important;
-        color: #333!important;
-        font-weight: 700;
-    }
-    #catlinks ul {
-        text-shadow: none;
-    }
-    #searchInput {
-        height: 28px;
-        border-top: 1px solid #525252!important;
-        border-left: 1px solid #525252!important;
-        border-right: 1px solid transparent!important;
-        border-bottom: 1px solid #525252!important;
-        background-color: transparent;
-        color: #666;
-        transition: all .2s;
-    }
-    #searchInput:focus, #searchInput:hover {
-        border: 1px solid #ccc!important;
-        color: #ccc;
-    }
-    #mw-searchButton {
-        border: 1px solid #525252!important;
-        background-color: transparent;
-        color: #666;
-        height: 30px;
-        transition: all .2s;
-    }
-    #mw-searchButton:hover {
-        background-color: transparent;
-        border: 1px solid #ccc!important;
-        color: #ccc;
-    }
-    #bodyContent table div {
-        background-color: #525252!important;
-    }
+@-moz-document regexp("(?:^https?\\:\\/\\/)?(?:wiki\\.facepunch\\.com).*") {
+	:root {
+		--accentColor: #2196f3;
+		--backgroundColor: #222;
+		--textColor: #d0d0d0;
+		--headingColor: #9D9D9D;
+		--noticeColor: #e14c72;
+	}
+}
+@-moz-document regexp("(?:^https?\\:\\/\\/)?(?:wiki\\.facepunch\\.com)\\/gmod.*") {:root {--accentColor: #339bff;}}
+@-moz-document regexp("(?:^https?\\:\\/\\/)?(?:wiki\\.facepunch\\.com)\\/rust.*") {:root {--accentColor: #CD412B;}}
+@-moz-document regexp("(?:^https?\\:\\/\\/)?(?:wiki\\.facepunch\\.com)\\/steamworks.*") {:root {--accentColor: #749241;}}
+@-moz-document regexp("(?:^https?\\:\\/\\/)?(?:wiki\\.facepunch\\.com)\\/wiki.*") {:root {--accentColor: #42c3e2;}}
+@-moz-document regexp("(?:^https?\\:\\/\\/)?(?:wiki\\.facepunch\\.com)\\/internal.*") {:root {--accentColor: #2196f3;}}
+@-moz-document regexp("(?:^https?\\:\\/\\/)?(?:wiki\\.facepunch\\.com)\\/?") {
+	html {
+		background-color: var(--backgroundColor);
+	}
+	body > div > div > div > div > a {
+		color: var(--textColor) !important;
+	}
+	body > div > div > div > div:nth-child(2) {
+		color: var(--headingColor) !important;
+	}
+}
+@-moz-document regexp("(?:^https?\\:\\/\\/)?(?:wiki\\.facepunch\\.com)\\/.+") {
+	
+	html > body > .body {
+		background-color: var(--backgroundColor);
+	}
+	.body {
+		background: none;
+	}
+	html > body a {
+		color: var(--accentColor);
+	}
+	h1.pagetitle { 
+		color: var(--accentColor) !important;
+		border-bottom: 3px solid var(--accentColor);
+	}
+	/* Default text */
+	.markdown {
+		color: var(--textColor);
+	}
+	/* Headings */
+	.markdown h1, .markdown h2 {
+		color: var(--headingColor);
+	}
+	/* Inline, red notices */
+	.markdown code {
+		background-color: rgba(0,0,0,.3);
+		color: var(--noticeColor);
+	}
+	.markdown code, .markdown .code, .markdown > .function .function_line {
+		font-family: 'Fira Code', monospace;
+	}
+	
+	/* Function Lines in ref */
+	.markdown > .function .function_line {
+		background: rgba(0,0,0,.3);;
+	}
+	.markdown div.bug {
+		color: #52a756;
+	}
+	.markdown div.bug::before {
+		color: #355737;
+	}
+	.markdown div.internal {
+		color: #9e9e9e;
+	}
+	.markdown div.internal::before {
+		color: #545454;
+	}
+	.markdown div.note {
+		color: #8bc34a;
+	}
+	.markdown div.note::before {
+		color: #4c6232;
+	}
+	.markdown div.validate {
+		color: #e91e63;
+	}
+	.markdown div.validate::before {
+		color: #72203c;
+	}
+	.markdown div.warning {
+		color: #ff9800;
+	}
+	.markdown div.warning::before {
+		color: #7a5114;
+	}
+	/* Image dimmer */
+	.markdown img.image {
+		opacity: .5;
+		transition: opacity .2s;
+	}
+	.markdown img.image:hover {
+		opacity: 1;
+	}
 }
